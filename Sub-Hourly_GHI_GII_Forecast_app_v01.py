@@ -9,7 +9,7 @@ Created on Sun Aug 15 19:57:43 2021
 
 import streamlit as st
 import plotly.express as px
-import pvlib
+import pvlib as pvlib
 import numpy as np
 import pandas as pd
 import pytz

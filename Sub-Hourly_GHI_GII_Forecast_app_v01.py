@@ -229,19 +229,19 @@ col1,col2=st.columns(2)
 def st_pandas_to_csv_download_link(_df:pd.DataFrame, file_name:str = "dataframe.csv"): 
     csv_exp = _df.to_csv(index=False)
     b64 = base64.b64encode(csv_exp.encode()).decode()  # some strings <-> bytes conversions necessary here
-    href = f'<a href="data:file/csv;base64,{b64}" download="{file_name}" > Download Summer Irradiance Data (W/m\u00b2) </a>'
+    href = f'<a href="data:file/csv;base64,{b64}" download="{file_name}" > Download Day-1 Irradiance Data (W/m\u00b2) </a>'
     col1.markdown(href, unsafe_allow_html=True)
 
-data_d1=st_pandas_to_csv_download_link(day1_irradiance, file_name = "summer_irradiance.csv")
+data_d1=st_pandas_to_csv_download_link(day1_irradiance, file_name = "Day#1_irradiance.csv")
 
 
 def st_pandas_to_csv_download_link(_df:pd.DataFrame, file_name:str = "dataframe.csv"): 
     csv_exp = _df.to_csv(index=False)
     b64 = base64.b64encode(csv_exp.encode()).decode()  # some strings <-> bytes conversions necessary here
-    href = f'<a href="data:file/csv;base64,{b64}" download="{file_name}" > Download Winter Irradiance Data (W/m\u00b2) </a>'
+    href = f'<a href="data:file/csv;base64,{b64}" download="{file_name}" > Download Day-2 Irradiance Data (W/m\u00b2) </a>'
     col2.markdown(href, unsafe_allow_html=True)
 
-data_d2=st_pandas_to_csv_download_link(day2_irradiance, file_name = "winter_irradiance.csv")
+data_d2=st_pandas_to_csv_download_link(day2_irradiance, file_name = "Day#2_irradiance.csv")
 
 
 

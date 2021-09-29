@@ -400,7 +400,7 @@ for hour in np.unique(solpos.index.hour):
     pos = solpos.loc[height.idxmax(), :]
     ax.text(pos['azimuth'], pos['apparent_elevation'], str(hour))
 
-for date in pd.to_datetime(['2019-03-21', '2019-06-21', '2019-12-21']):
+for date in pd.to_datetime(['2020-03-21', '2020-06-21', '2020-12-21']):
     times = pd.date_range(date, date+pd.Timedelta('24h'), freq='5min', tz=tz)
     solpos = solarposition.get_solarposition(times, lat, lon)
     solpos = solpos.loc[solpos['apparent_elevation'] > 0, :]

@@ -1,4 +1,4 @@
-streamlit==0.88.0
+streamlit
 streamlit-folium==0.4.0
 streamlit-metrics==0.1.0
 pvlib==0.9.0
